@@ -1,0 +1,16 @@
+node_modules/
+.runtime/
+.test-runtime/
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+*.gguf
+*.safetensors
+*.zip
+*.tgz
+*.partial
+__pycache__/
+.cordis/
+coverage/

@@ -1,0 +1,19 @@
+- insert:
+    - id: plamo-translation-api
+      name: dsh-plamo-translate
+      config:
+        autoStart: true
+    - id: translator
+      name: dsh-plamo-translate/translator
+      config:
+        provider: plamo
+        plamoEndpoint: http://127.0.0.1:18080/v1/chat/completions
+        plamoModel: plamo-3-translate-0.8b
+        plamoMaxOutputTokens: 2048
+        timeoutMs: 60000
+        maxTextChars: 1200
+    - id: cot-translation
+      name: dsh-plamo-translate/cot-controller
+      config:
+        provider: plamo
+        targetLanguage: ja

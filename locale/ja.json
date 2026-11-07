@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Thinkingの翻訳（PLaMo）",
+    "description": "展開したThinkingをPLaMo APIで翻訳します。原文の切り替えと保存した訳の再利用に対応します。"
+  }
+}

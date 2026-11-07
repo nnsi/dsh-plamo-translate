@@ -1,0 +1,16 @@
+This project adapts experimental translation packages from DeepSeek Harness
+0.2.2-rc.1, Copyright (c) 2026 DeepSeek, under the MIT License.
+The original license is retained in vendor/LICENSE.upstream.
+
+Upstream: https://github.com/deepseek-ai/deepseek-harness
+Adapted packages:
+- packages/experimental/translator
+- packages/experimental/client-ui-cot-translation
+
+Local modifications add a PLaMo Chat Completions provider, configurable API
+authentication, a portable bundle layout, and optional Windows API startup.
+See scripts/build-vendor.py and upstream.json for reproducible source changes.
+
+Model weights and llama.cpp binaries are not included in this repository.
+PLaMo weights are distributed separately under the PLaMo Community License.
+llama.cpp is distributed separately under its own MIT License.

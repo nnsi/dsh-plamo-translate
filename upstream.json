@@ -1,0 +1,11 @@
+{
+  "dshVersion": "0.2.2-rc.1",
+  "repository": "https://github.com/deepseek-ai/deepseek-harness",
+  "sha256": {
+    "dsh-experimental-translator/lib/index.js": "b7babfaa3ec492d176a30bd6042ae2cab7d127558c5869f4821bead6483fc4e2",
+    "dsh-experimental-client-ui-cot-translation/lib/client.js": "00dd06cffd8fca5ea81beabf93d8cd86911c6c5a06081d120624cf6850da06db",
+    "dsh-experimental-client-ui-cot-translation/lib/index.js": "28dc0b0769a6b4f7e7a324a59d728a24c569a2f0d0c5c01ef2a9b5ecb304142d",
+    "dsh-experimental-client-ui-cot-translation/lib/typert.host.js": "93af90604d06043cc3ca6f9c411dd402a5d477b8db496712905e93540bca59f6",
+    "dsh-experimental-client-ui-cot-translation/lib/typert.remote-client.js": "d1e919b88d0d62f2aad4bfae7684d10c0384e7f3589a390e7fc18a523c304387"
+  }
+}
