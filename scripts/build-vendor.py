@@ -47,7 +47,7 @@ for upstream, folder in [
 ]:
     source_root = resolve_package('@deepseek-ai/' + upstream)
     dest = ROOT / 'vendor' / folder
-    for source in source_root.rglob('*'):
+    for source in sorted(source_root.rglob('*'), key=lambda path: path.as_posix()):
         if not source.is_file() or 'node_modules' in source.relative_to(source_root).parts:
             continue
         relative = source.relative_to(source_root)
@@ -124,6 +124,6 @@ for upstream, folder in [
         content = re.sub(r'^\s*//#region.*dsh-css:.*$', '\t\t//#region bundled styles', content, flags=re.M)
         target.write_text(content.rstrip() + '\n', encoding='utf-8', newline='\n')
 
-(ROOT / 'upstream.json').write_text(json.dumps({'dshVersion': VERSION, 'repository': 'https://github.com/deepseek-ai/deepseek-harness', 'sha256': hashes}, indent=2) + '\n', encoding='utf-8', newline='\n')
+(ROOT / 'upstream.json').write_text(json.dumps({'dshVersion': VERSION, 'repository': 'https://github.com/deepseek-ai/deepseek-harness', 'sha256': hashes}, indent=2, sort_keys=True) + '\n', encoding='utf-8', newline='\n')
 (ROOT / 'vendor' / 'LICENSE.upstream').write_text((resolve_package('@deepseek-ai/dsh-experimental-translator') / 'LICENSE').read_text(encoding='utf-8'), encoding='utf-8', newline='\n')
 print('Built portable PLaMo translator and Thinking UI')
