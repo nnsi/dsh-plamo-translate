@@ -107,7 +107,7 @@ async function start() {
 let app;
 try {
   const tarball = join(root, 'dsh-plamo-translate-0.1.0.tgz');
-  await run(['plugin', '--profile', 'web', 'add', tarball, '--offline', '--ignore-scripts']);
+  await run(['plugin', '--profile', 'web', 'add', tarball, '--ignore-scripts']);
   app = await start();
   assert.deepEqual((await app.rpc('cotTranslation/limits', {})).preferences, { provider: 'plamo', targetLanguage: 'ja' });
   assert.equal(await app.rpc('cotTranslation/translate', { request: { text: 'Hello.', sourceLanguage: 'en', targetLanguage: 'ja', provider: 'plamo' } }), '設定を確認します。');
